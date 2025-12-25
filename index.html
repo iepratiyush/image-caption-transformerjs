@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Caption Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📸 AI Image Caption Generator</h1>
+            <p>Upload an image and get an AI-generated caption</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p>Click to upload or drag and drop</p>
+                <p class="upload-hint">PNG, JPG, WEBP up to 10MB</p>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+            </div>
+
+            <div id="previewSection" class="preview-section" style="display: none;">
+                <img id="previewImage" alt="Preview">
+                <button id="clearBtn" class="clear-btn">Clear Image</button>
+            </div>
+
+            <button id="generateBtn" class="generate-btn" style="display: none;">
+                <span id="btnText">Generate Caption</span>
+                <span id="btnLoader" class="loader" style="display: none;"></span>
+            </button>
+
+            <div id="statusMessage" class="status-message"></div>
+
+            <div id="captionSection" class="caption-section" style="display: none;">
+                <h2>Generated Caption</h2>
+                <div id="captionText" class="caption-text"></div>
+                <button id="copyBtn" class="copy-btn">Copy Caption</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
