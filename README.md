@@ -2,6 +2,10 @@
 
 A web application that generates captions for images using AI models, powered by Transformer.js.
 
+## Demo 
+
+- [Demo URL](https://iepratiyush.github.io/image-caption-transformerjs/)
+
 ## Features
 
 - Upload images via drag-and-drop or file picker
